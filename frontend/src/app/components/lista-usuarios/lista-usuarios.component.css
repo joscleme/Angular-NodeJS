@@ -1,0 +1,11 @@
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    margin-top: 20px;
+}
+
+button {
+    margin-top: 10px;
+}

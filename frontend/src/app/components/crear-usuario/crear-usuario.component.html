@@ -1,0 +1,15 @@
+<div class="contenedor">
+
+    <h1>Crear usuario</h1>
+    <button [routerLink]="['/']">Volver</button>
+
+    <form [formGroup]="insertarForm">
+        Nombre: <input type="text" placeholder="Nombre" formControlName="nombre">
+        <br>
+        Apellidos: <input type="text" placeholder="Apellidos" formControlName="apellidos">
+        <br>
+        Edad: <input type="number" placeholder="Edad" formControlName="edad" min="0">
+        <button (click)="insertarUsuario()" [disabled]="insertarForm.invalid">Insertar</button>
+    </form>
+
+</div>

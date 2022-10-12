@@ -1,0 +1,26 @@
+<div class="contenedor">
+
+    <button [routerLink]="['crear-usuario']">Crear usuario</button>
+
+    <h1>Lista de usuarios</h1>
+
+    <table *ngIf="usuarios.length > 0">
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Edad</th>
+        </tr>
+        <tr *ngFor="let usuario of usuarios; let i = index;">
+            <td>{{ usuario._id }}</td>
+            <td>{{ usuario.nombre }}</td>
+            <td>{{ usuario.apellidos }}</td>
+            <td>{{ usuario.edad }}</td>
+            <td><button [routerLink]="['editar-usuario', usuario._id]">Editar</button></td>
+            <td><button (click)="eliminarUsuario(usuario._id, i)">Eliminar</button></td>
+        </tr>
+    </table>
+
+    <div *ngIf="usuarios.length == 0">No hay usuarios</div>
+
+</div>
